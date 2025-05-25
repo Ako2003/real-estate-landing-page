@@ -1,5 +1,22 @@
 @import "tailwindcss";
 
+* {
+  font-family: var(--font-poppins), sans-serif;
+  color: var(--color-black);
+}
+
+.font-geist-mono {
+  font-family: var(--font-geist-mono);
+}
+
+.font-geist-sans {
+  font-family: var(--font-geist-sans);
+}
+
+.font-libre-baskerville {
+  font-family: var(--font-libre-baskerville);
+}
+
 :root {
   --background: #ffffff;
   --foreground: #171717;
@@ -14,7 +31,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
+    --background: #f1ecea;
     --foreground: #ededed;
   }
 }
@@ -23,4 +40,24 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+
+@theme {
+  --color-pink: #f1ecea;
+  --color-black: #171717
+}
+
+
+/* CSS */
+.main-background {
+  background-image: url('/images/backgrounds/c837a6_991d1c2bddf447e399b6a73d4e0281a6~mv2.jpeg');
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.container {
+  max-width: 1350px;
+  margin: 0 auto;
+  width: 91.67%;
 }
