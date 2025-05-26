@@ -11,26 +11,28 @@ const menu = [
 
 export default function Nav() {
     return(
-        <section className="flex items-center h-[70px] w-full bg-pink">
-            <div className="container flex items-center justify-between">
-                {/* Menu */}
-                <ul className="flex gap-5 font-light">
-                    {menu.map((item) => (
-                        <li key={item.title}>
-                            <Link href={`#${item.slug}`} passHref>
-                                {item.title}
-                            </Link>
-                        </li>
-                    ))}
-                </ul>
+        <section className="fixed top-0 w-full">
+            <div className="flex items-center h-[70px] w-full bg-pink">
+                <div className="container flex items-center justify-between">
+                    {/* Menu */}
+                    <ul className="flex gap-5 font-light">
+                        {menu.map((item) => (
+                            <li key={item.title}>
+                                <Link href={`#${item.slug}`} passHref>
+                                    {item.title}
+                                </Link>
+                            </li>
+                        ))}
+                    </ul>
 
-                {/*  Logo  */}
-                <h5 className="font-libre-baskerville font-bold">LP/52</h5>
+                    {/*  Logo  */}
+                    <h5 className="font-libre-baskerville font-bold">LP/52</h5>
 
-                {/* Button and Social Media */}
-                <div className="flex items-center gap-x-5">
-                    <Button bgColor="#3e2b24" textColor="#c5b593" borderColor="#3e2b24">Inquire</Button>
-                    <SocialMedia socialMedia={["instagram", "youtube", "facebook"]} />
+                    {/* Button and Social Media */}
+                    <div className="flex items-center gap-x-5">
+                        <Button bgColor="#3e2b24" textColor="#c5b593" borderColor="#3e2b24">Inquire</Button>
+                        <SocialMedia socialMedia={["instagram", "youtube", "facebook"]} />
+                    </div>
                 </div>
             </div>
         </section>

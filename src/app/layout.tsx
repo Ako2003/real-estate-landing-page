@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Libre_Baskerville } from "next/font/google";
+import { Geist, Geist_Mono, Poppins, Libre_Baskerville, Wix_Madefor_Display } from "next/font/google";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({
@@ -8,10 +8,6 @@ const libreBaskerville = Libre_Baskerville({
     weight: ["400", "700"],
 })
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
 
 const poppins = Poppins({
     variable: "--font-poppins",
@@ -19,10 +15,11 @@ const poppins = Poppins({
     subsets: ["latin"],
 })
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const madefor_display = Wix_Madefor_Display({
+    variable: "--font-madefor-display",
+    subsets: ["latin"],
+    weight: ["400", "500", "600", "700", "800"],
+})
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -37,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${poppins.variable} ${libreBaskerville.variable} antialiased`}
+        className={`${madefor_display.variable} ${poppins.variable} ${libreBaskerville.variable} antialiased`}
       >
         {children}
       </body>
