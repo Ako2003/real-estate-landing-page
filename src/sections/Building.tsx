@@ -1,6 +1,5 @@
 import Image from "next/image";
 import Button from "@/components/Button";
-import {Icon} from "lucide-react";
 
 export default function Building() {
     return(
@@ -39,19 +38,19 @@ export default function Building() {
                     </p>
                     <div className="flex flex-col gap-y-2">
                         <div className="flex gap-x-3">
-                            <Image src={"/svg/floor.svg"} width={20} height={20} alt={"Floor Icon"}/>
+                            <Image src={"/svg/floor/brown.svg"} width={20} height={20} alt={"Brown Floor Icon"}/>
                             <span className="!text-brown">Floors: 1-2</span>
                         </div>
                         <div className="flex gap-x-3">
-                            <Image src={"/svg/space.svg"} width={20} height={20} alt={"Floor Icon"}/>
+                            <Image src={"/svg/space/brown.svg"} width={20} height={20} alt={"Brown Space Icon"}/>
                             <span className="!text-brown">Space: 150 Sqm</span>
                         </div>
                         <div className="flex gap-x-3">
-                            <Image src={"/svg/bedroom.svg"} width={20} height={20} alt={"Floor Icon"}/>
+                            <Image src={"/svg/bedroom/brown.svg"} width={20} height={20} alt={"Brown Bedroom Icon"}/>
                             <span className="!text-brown">Bedrooms: 2</span>
                         </div>
                         <div className="flex gap-x-3">
-                            <Image src={"/svg/floor.svg"} width={20} height={20} alt={"Floor Icon"}/>
+                            <Image src={"/svg/bathroom/brown.svg"} width={20} height={20} alt={"Brown Bathroom Icon"}/>
                             <span className="!text-brown">Bathrooms: 1-2</span>
                         </div>
                     </div>
