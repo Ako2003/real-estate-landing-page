@@ -4,6 +4,7 @@ import Body from "@/sections/Body";
 import Building from "@/sections/Building";
 import Ocean from "@/sections/Ocean";
 import Sky from "@/sections/Sky";
+import Motivation from "@/sections/Motivation";
 
 
 export default function Page(){
@@ -15,6 +16,7 @@ export default function Page(){
             <Building />
             <Ocean />
             <Sky />
+            <Motivation />
         </div>
     )
 }
