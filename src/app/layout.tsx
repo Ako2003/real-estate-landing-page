@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Poppins, Libre_Baskerville, Wix_Madefor_Display } from "next/font/google";
+import { Poppins, Libre_Baskerville, Wix_Madefor_Display } from "next/font/google";
 import "./globals.css";
 
 const libreBaskerville = Libre_Baskerville({

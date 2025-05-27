@@ -34,7 +34,7 @@ export default function Building() {
                 <div className="pb-20 flex justify-between">
                     <h3 className="italic !text-brown">Gardenia Apt.</h3>
                     <p className="font-madefor-display max-w-2xs !text-brown">
-                        I'm a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
+                        I{"'"}m a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
                     </p>
                     <div className="flex flex-col gap-y-2">
                         <div className="flex gap-x-3">

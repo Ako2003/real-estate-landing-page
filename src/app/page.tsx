@@ -17,6 +17,7 @@ export default function Page(){
             <Ocean />
             <Sky />
             <Motivation />
+            {/*<Location />*/}
         </div>
     )
 }
