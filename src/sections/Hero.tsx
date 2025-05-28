@@ -4,8 +4,8 @@ export default function Hero() {
     return (
         <section className="flex container">
             <div className="flex flex-col h-[880px] justify-center">
-                <h4 className="italic !text-brown">Meet me at</h4>
-                <h1 className="font-bold !text-brown">LA PERLA</h1>
+                <h4 className="italic">Meet me at</h4>
+                <h1 className="font-bold">LA PERLA</h1>
                 <h4 className="italic">52 Brook St.</h4>
 
                 <div className="mt-32 max-w-sm">

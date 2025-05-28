@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 * {
-  font-family: var(--font-poppins), sans-serif;
-  color: var(--color-black);
+  font-family: var(--font-libre-baskerville), sans-serif;
+  color: var(--color-brown);
 }
 
 .font-madefor-display {

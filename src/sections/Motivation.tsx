@@ -8,7 +8,7 @@ export default function Motivation() {
                     <Image src={"/images/pexels-hiraldo-photos-1238187226-23124396 copy.jpg"} width={180} height={220}
                            alt={"Girl on the beach"}/>
                 </div>
-                <h3 className="!text-brown my-20">
+                <h3 className="my-20">
                     “Immerse yourself in the seamless fusion of <i className="font-libre-baskerville">timeless
                     architecture</i> and <i className="font-libre-baskerville">modern design</i>, where each home tells
                     a story of its own”

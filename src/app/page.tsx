@@ -5,6 +5,9 @@ import Building from "@/sections/Building";
 import Ocean from "@/sections/Ocean";
 import Sky from "@/sections/Sky";
 import Motivation from "@/sections/Motivation";
+import Location from "@/sections/Location";
+import CEO from "@/sections/CEO"
+import Developer from "@/sections/Developer";
 
 
 export default function Page(){
@@ -17,7 +20,9 @@ export default function Page(){
             <Ocean />
             <Sky />
             <Motivation />
-            {/*<Location />*/}
+            <Location />
+            <CEO />
+            <Developer />
         </div>
     )
 }

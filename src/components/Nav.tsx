@@ -18,7 +18,7 @@ export default function Nav() {
                     <ul className="flex gap-5 font-light">
                         {menu.map((item) => (
                             <li key={item.title}>
-                                <Link href={`#${item.slug}`} passHref>
+                                <Link className="font-madefor-display" href={`#${item.slug}`} passHref>
                                     {item.title}
                                 </Link>
                             </li>

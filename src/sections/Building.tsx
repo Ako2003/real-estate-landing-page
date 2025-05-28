@@ -32,26 +32,26 @@ export default function Building() {
                 </div>
 
                 <div className="pb-20 flex justify-between">
-                    <h3 className="italic !text-brown">Gardenia Apt.</h3>
-                    <p className="font-madefor-display max-w-2xs !text-brown">
+                    <h3 className="italic ">Gardenia Apt.</h3>
+                    <p className="font-madefor-display max-w-2xs">
                         I{"'"}m a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
                     </p>
                     <div className="flex flex-col gap-y-2">
                         <div className="flex gap-x-3">
                             <Image src={"/svg/floor/brown.svg"} width={20} height={20} alt={"Brown Floor Icon"}/>
-                            <span className="!text-brown">Floors: 1-2</span>
+                            <span>Floors: 1-2</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/space/brown.svg"} width={20} height={20} alt={"Brown Space Icon"}/>
-                            <span className="!text-brown">Space: 150 Sqm</span>
+                            <span>Space: 150 Sqm</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/bedroom/brown.svg"} width={20} height={20} alt={"Brown Bedroom Icon"}/>
-                            <span className="!text-brown">Bedrooms: 2</span>
+                            <span>Bedrooms: 2</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/bathroom/brown.svg"} width={20} height={20} alt={"Brown Bathroom Icon"}/>
-                            <span className="!text-brown">Bathrooms: 1-2</span>
+                            <span>Bathrooms: 1-2</span>
                         </div>
                     </div>
                     <div className="flex flex-col gap-y-3">
