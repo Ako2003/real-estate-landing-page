@@ -54,7 +54,15 @@ body {
   background-position: center center;
   background-repeat: no-repeat;
   background-size: cover;
+}
 
+.secondary-background {
+  background-image: url('/images/backgrounds/c837a6_fea387f0dfa64199a1a9111866e249da~mv2.jpg');
+  background-attachment: fixed;
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1283px;
 }
 
 .container {

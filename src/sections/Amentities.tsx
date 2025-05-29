@@ -5,7 +5,7 @@ export default function Amentities(){
 
     return(
         <section>
-            <div className="py-30">
+            <div className="pt-30 pb-20">
                 <div className="max-w-4xl mx-auto">
                     <h6 className="mb-5">Premier Amenities for Elevated Living</h6>
                     <h3 className="">Indulge in <i className="font-libre-baskerville">Unparalleled Luxury <br /> </i> at Our Urban Oasis</h3>

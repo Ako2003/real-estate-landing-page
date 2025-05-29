@@ -1,23 +1,76 @@
-# Use official Node.js LTS image as the base
-FROM node:18-alpine
+# Use a base node image
+FROM node:18-alpine AS base
 
-# Set working directory inside container
+## Enable corepack for npm management
+RUN corepack enable
+RUN corepack prepare npm@latest --activate
+
+# Install dependencies only when needed
+FROM base AS deps
+RUN apk add --no-cache libc6-compat
 WORKDIR /app
 
-# Copy package.json and package-lock.json (or yarn.lock) first for better caching
-COPY package*.json ./
+# Copy package.json and package-lock.json
+COPY package.json package-lock.json* ./
 
-# Install dependencies
-RUN npm install
+# Install all dependencies
+RUN npm i
 
-# Copy the rest of the app source code
+# Development image
+FROM base AS dev
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
 COPY . .
 
-# Build the Next.js app
+# Build the source code
+FROM base AS builder
+WORKDIR /app
+COPY --from=deps /app/node_modules ./node_modules
+COPY . .
+
+# Set environment variable to disable Next.js telemetry during build
+ENV NEXT_TELEMETRY_DISABLED 1
+
+# Build the application
 RUN npm run build
 
-# Expose port the app will run on
+# Run IndexNow (for sending a ping to search engines if some links of the website was changed)
+RUN node lib/indexnow.js
+
+# Production image, setup environment
+FROM base AS runner
+WORKDIR /app
+
+# Set the NODE_ENV to production
+ENV NODE_ENV production
+
+# Create a non-root user and set file ownership
+RUN addgroup --system --gid 1001 nodejs
+RUN adduser --system --uid 1001 nextjs
+COPY --from=builder /app/public ./public
+
+# Copy the build output from builder stage
+COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+
+# Final production image
+FROM runner AS production
+
+# Set the working directory
+WORKDIR /app
+
+# Install production node_modules
+RUN npm install --only=production
+
+# Switch to non-root user
+USER nextjs
+
+# Expose the port the app runs on
 EXPOSE 3000
 
-# Start the Next.js production server
-CMD ["npm", "start"]
+# Set environmental variables
+ENV PORT 3000
+ENV HOSTNAME "0.0.0.0"
+
+# Start the application
+CMD ["node", "server.js"]

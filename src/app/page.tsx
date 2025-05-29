@@ -1,5 +1,19 @@
 import Nav from "@/components/Nav";
-import { Hero, Body, Building, Ocean, Sky, Motivation, Location, CEO, Developer, Amentities } from "@/sections"
+import {
+    Hero,
+    Body,
+    Building,
+    Ocean,
+    Sky,
+    Motivation,
+    Location,
+    CEO,
+    Developer,
+    Amentities,
+    Presale,
+    BackgroundImage,
+    GetInTouch
+} from "@/sections"
 
 
 export default function Page(){
@@ -16,6 +30,9 @@ export default function Page(){
             <CEO />
             <Developer />
             <Amentities />
+            <Presale />
+            <BackgroundImage />
+            {/*<GetInTouch />*/}
         </div>
     )
 }

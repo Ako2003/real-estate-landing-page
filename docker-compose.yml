@@ -1,13 +1,16 @@
-version: "3.8"
-
 services:
-  web:
-    build: .
-    ports:
-      - "3000:3000"
+  frontend:
+    container_name: real-estate
+    build:
+      context: ./
+      target: production
+    restart: always
     environment:
       - NODE_ENV=production
-    volumes:
-      - .:/app
-      - /app/node_modules
-    command: npm start
+  #   ports:
+#      - "3001:3000"  # Uncommented for external access
+
+networks:
+  default:
+    name: nginx-proxy-manager
+    external: true

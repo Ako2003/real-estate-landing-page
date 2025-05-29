@@ -8,6 +8,9 @@ import Location from "@/sections/Location";
 import CEO from "@/sections/CEO"
 import Developer from "@/sections/Developer";
 import Amentities from "@/sections/Amentities";
+import Presale from "@/sections/Presale";
+import BackgroundImage from "@/sections/BackgroundImage"
+import GetInTouch from "@/sections/GetInTouch"
 
 export {
     Hero,
@@ -19,5 +22,8 @@ export {
     Location,
     CEO,
     Developer,
-    Amentities
+    Amentities,
+    Presale,
+    BackgroundImage,
+    GetInTouch
 }

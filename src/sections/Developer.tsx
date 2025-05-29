@@ -13,7 +13,6 @@ export default function Developer() {
                         edit me. It’s easy. Just click “Edit Text” or double click me to add your own content and make
                         changes to the font. I’m a great place for you to tell a story and let your users know a little
                         more about you.</p>
-                    <Image src={"/svg/signature.svg"} alt={"Raya Hayek's signature"} width={211} height={87}/>
                 </div>
                 <div>
                     <Image
