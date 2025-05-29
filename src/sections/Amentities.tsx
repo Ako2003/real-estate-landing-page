@@ -1,0 +1,23 @@
+import EmblaCarousel from "@/components/EmblaCarousel";
+import { slides } from "@/constants/slides";
+
+export default function Amentities(){
+
+    return(
+        <section>
+            <div className="py-30">
+                <div className="max-w-4xl mx-auto">
+                    <h6 className="mb-5">Premier Amenities for Elevated Living</h6>
+                    <h3 className="">Indulge in <i className="font-libre-baskerville">Unparalleled Luxury <br /> </i> at Our Urban Oasis</h3>
+                </div>
+
+                <div className="max-w-[1750px] mx-auto mt-15">
+                    <EmblaCarousel slides={slides} options={{
+                        loop: true,
+                        dragFree: true,
+                    }} />
+                </div>
+            </div>
+        </section>
+    )
+}
