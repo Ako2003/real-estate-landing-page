@@ -45,7 +45,7 @@ export default function Nav() {
             <div className="flex items-center h-[70px] w-full bg-pink">
                 <div className="container flex items-center justify-between">
                     {/* Menu */}
-                    <ul className="flex gap-5 font-light max-md:hidden">
+                    <ul className="flex gap-5 font-light max-lg:hidden">
                         {menu.map((item) => (
                             <li key={item.title}>
                                 <Link className="font-madefor-display" href={`#${item.slug}`} passHref>

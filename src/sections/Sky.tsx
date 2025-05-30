@@ -7,8 +7,8 @@ export default function Sky() {
             <div className="container">
                 {/* Images */}
                 <div className="pt-20 mb-10">
-                    <div className="flex max-md:flex-col mx-auto gap-x-20">
-                        <div className="w-full max-md:mb-10">
+                    <div className="flex max-lg:flex-col mx-auto gap-x-20">
+                        <div className="w-full max-lg:mb-10">
                             <Image
                                 src={"/images/c837a6_b71e08bb5f4842229b68056de18675d0~mv2.jpg"}
                                 alt={"Room with sofa"} width={440} height={720}
@@ -22,7 +22,7 @@ export default function Sky() {
                     </div>
                 </div>
 
-                <div className="pb-20 flex max-md:flex-col gap-y-5 justify-between">
+                <div className="pb-20 flex max-lg:flex-col gap-y-5 justify-between">
                     <h3 className="italic !text-yellow">Sky Apt.</h3>
                     <p className="font-madefor-display max-w-2xs !text-yellow">
                         I{"'"}m a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.

@@ -16,8 +16,8 @@ export default function Building() {
 
                 {/* Images */}
                 <div className="pt-20 mb-10">
-                    <div className="flex max-md:flex-col mx-auto gap-x-20">
-                        <div className="w-full max-md:mb-10">
+                    <div className="flex max-lg:flex-col mx-auto gap-x-20">
+                        <div className="w-full max-lg:mb-10">
                             <Image
                                 src={"/images/c837a6_7c1f9ec45bb847d59f6805065ad64852~mv2.jpg"}
                                 alt={"Kitchen with sink"} width={440} height={720}
@@ -31,7 +31,7 @@ export default function Building() {
                     </div>
                 </div>
 
-                <div className="pb-20 flex max-md:flex-col gap-y-5 justify-between">
+                <div className="pb-20 flex max-lg:flex-col gap-y-5 justify-between">
                     <h3 className="italic">Gardenia Apt.</h3>
                     <p className="font-madefor-display max-w-2xs">
                         I{"'"}m a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
