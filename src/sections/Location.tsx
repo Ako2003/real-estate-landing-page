@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Location() {
     return (
-        <section className="bg-yellow">
+        <section className="bg-yellow" id="location">
             <div className="mx-auto max-w-4xl py-20">
                 <h6 className="font-libre-baskerville text-center">Best Possible Location</h6>
 

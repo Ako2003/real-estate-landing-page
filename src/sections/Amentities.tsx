@@ -4,7 +4,7 @@ import { slides } from "@/constants/slides";
 export default function Amentities(){
 
     return(
-        <section>
+        <section id="amenities">
             <div className="pt-30 pb-20">
                 <div className="max-w-4xl w-11/12 mx-auto">
                     <h6 className="mb-5">Premier Amenities for Elevated Living</h6>

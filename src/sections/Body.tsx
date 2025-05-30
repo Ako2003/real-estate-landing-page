@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Body(){
     return(
-        <section className="container">
-            <div className="mt-20 max-w-4xl mx-auto">
+        <section className="container" id="about">
+            <div className="pt-20 max-w-4xl mx-auto">
                 <h6 className="mb-5">A Different State of Mind</h6>
                 <h3>
                     Established in the historic quarter, where cultural legacy meets the <i

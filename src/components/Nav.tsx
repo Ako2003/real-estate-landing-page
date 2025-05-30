@@ -8,7 +8,7 @@ import {Menu, X} from "lucide-react";
 
 const menu = [
     { title: "About", slug: "about" },
-    { title: "The Building", slug: "the-building" },
+    { title: "The Building", slug: "building" },
     { title: "Location", slug: "location" },
     { title: "Amenities", slug: "amenities" },
 ];
@@ -40,7 +40,7 @@ export default function Nav() {
 
     return (
         <section
-            className={`fixed top-0 w-full transition-transform duration-300 ease-in-out ${
+            className={`fixed top-0 w-full transition-transform duration-300 ease-in-out z-20 ${
                 showNav ? "translate-y-0" : "lg:-translate-y-full"
             }`}
         >

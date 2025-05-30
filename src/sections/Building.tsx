@@ -3,7 +3,7 @@ import Button from "@/components/Button";
 
 export default function Building() {
     return(
-        <section className="bg-yellow">
+        <section className="bg-yellow" id="building">
             <div className="container">
                 <div className="pt-20 max-w-4xl mx-auto">
                     <h6 className="mb-5">A Different State of Mind</h6>
