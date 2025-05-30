@@ -15,13 +15,13 @@ export default function Body(){
 
             {/* Images */}
             <div className="mt-20 max-w-5xl mx-auto pb-30">
-                <div className="flex items-center justify-between">
-                    <div>
+                <div className="flex max-md:flex-col md:items-center justify-between">
+                    <div className="flex justify-start max-md:mb-10">
                         <Image
                             src={"/images/yuvalna_photograph_of_a_Boardwalk_that_is_close_to_the_building_3273c742-f097-4ed5-a17e-82.jpg"}
-                            alt={"Boardwalk near the building"} width={290} height={390}/>
+                            alt={"Boardwalk near the building"} width={290} height={390} className="max-md:w-[200px]"/>
                     </div>
-                    <div>
+                    <div className="flex justify-end">
                         <Image src={"/images/pexels-fernando-reyes-6600902 copy.jpg"} alt={"Beach"} width={209}
                                height={251}/>
                     </div>
