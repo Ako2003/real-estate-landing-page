@@ -39,8 +39,7 @@ export default function RootLayout({
         className={`${madefor_display.variable} ${poppins.variable} ${libreBaskerville.variable} antialiased`}
       >
         <Nav />
-            {children}
-        {/*<Footer />*/}
+        {children}
       </body>
     </html>
   );

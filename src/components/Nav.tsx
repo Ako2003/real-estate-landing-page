@@ -4,6 +4,7 @@ import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Button from "@/components/Button";
 import SocialMedia from "@/components/SocialMedia";
+import {Menu, X} from "lucide-react";
 
 const menu = [
     { title: "About", slug: "about" },
@@ -14,6 +15,7 @@ const menu = [
 
 export default function Nav() {
     const [showNav, setShowNav] = useState(true);
+    const [toggle, setToggle] = useState(false);
     const lastScrollY = useRef(0);
 
     useEffect(() => {
@@ -39,7 +41,7 @@ export default function Nav() {
     return (
         <section
             className={`fixed top-0 w-full transition-transform duration-300 ease-in-out ${
-                showNav ? "translate-y-0" : "-translate-y-full"
+                showNav ? "translate-y-0" : "lg:-translate-y-full"
             }`}
         >
             <div className="flex items-center h-[70px] w-full bg-pink">
@@ -64,9 +66,36 @@ export default function Nav() {
                             Inquire
                         </Button>
                         <SocialMedia socialMedia={["instagram", "youtube", "facebook"]} />
+                        <div className="lg:hidden" onClick={() => setToggle(!toggle)}>
+                            {
+                                toggle ? <X /> : <Menu />
+                            }
+                        </div>
                     </div>
+
+                    {
+                        toggle ? <Mobile setToggle={setToggle} /> : <></>
+                    }
+
                 </div>
             </div>
         </section>
     );
+}
+
+export function Mobile({ setToggle }: any) {
+    return (
+        <section className="absolute bg-pink h-[calc(100dvh-70px)] w-full left-0 top-[70px]">
+            <ul className="flex flex-col justify-center items-center h-full gap-5 font-light">
+                {menu.map((item) => (
+                    <li key={item.title} onClick={() => setToggle(false)}>
+                        <Link className="font-madefor-display" href={`#${item.slug}`} passHref>
+                            {item.title}
+                        </Link>
+                    </li>
+                ))}
+            </ul>
+        </section>
+
+    )
 }
