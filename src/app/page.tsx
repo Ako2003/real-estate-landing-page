@@ -12,7 +12,7 @@ import {
     Amentities,
     Presale,
     BackgroundImage,
-    GetInTouch
+    Footer,
 } from "@/sections"
 
 
@@ -32,7 +32,7 @@ export default function Page(){
             <Amentities />
             <Presale />
             <BackgroundImage />
-            {/*<GetInTouch />*/}
+            <Footer />
         </div>
     )
 }

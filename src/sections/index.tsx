@@ -9,8 +9,8 @@ import CEO from "@/sections/CEO"
 import Developer from "@/sections/Developer";
 import Amentities from "@/sections/Amentities";
 import Presale from "@/sections/Presale";
+import Footer from "@/sections/Footer"
 import BackgroundImage from "@/sections/BackgroundImage"
-import GetInTouch from "@/sections/GetInTouch"
 
 export {
     Hero,
@@ -24,6 +24,6 @@ export {
     Developer,
     Amentities,
     Presale,
-    BackgroundImage,
-    GetInTouch
+    Footer,
+    BackgroundImage
 }

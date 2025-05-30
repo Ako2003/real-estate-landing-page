@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
 import { Poppins, Libre_Baskerville, Wix_Madefor_Display } from "next/font/google";
 import "./globals.css";
+import Nav from "@/components/Nav";
+import { Footer } from "@/sections";
 
 const libreBaskerville = Libre_Baskerville({
     variable: "--font-libre-baskerville",
@@ -36,7 +38,9 @@ export default function RootLayout({
       <body
         className={`${madefor_display.variable} ${poppins.variable} ${libreBaskerville.variable} antialiased`}
       >
-        {children}
+        <Nav />
+            {children}
+        <Footer />
       </body>
     </html>
   );
