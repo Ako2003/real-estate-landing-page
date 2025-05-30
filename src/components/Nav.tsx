@@ -1,6 +1,6 @@
 "use client"
 
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect, useRef, Dispatch, SetStateAction } from "react";
 import Link from "next/link";
 import Button from "@/components/Button";
 import SocialMedia from "@/components/SocialMedia";
@@ -88,7 +88,7 @@ export default function Nav() {
     );
 }
 
-export function Mobile({ setToggle }: any) {
+export function Mobile({ setToggle }: { setToggle: Dispatch<SetStateAction<boolean>> }) {
     return (
         <AnimatePresence>
             <motion.section
