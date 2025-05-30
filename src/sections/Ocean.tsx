@@ -7,8 +7,8 @@ export default function Ocean() {
             <div className="container">
                 {/* Images */}
                 <div className="pt-20 mb-10">
-                    <div className="flex mx-auto gap-x-20">
-                        <div className="w-full">
+                    <div className="flex max-md:flex-col mx-auto gap-x-20">
+                        <div className="w-full max-md:mb-10">
                             <Image
                                 src={"/images/c837a6_ba96a404cf3349b2bf9c98aee7e510fd~mv2.jpg"}
                                 alt={"Room with Lamp"} width={440} height={720}
@@ -22,7 +22,7 @@ export default function Ocean() {
                     </div>
                 </div>
 
-                <div className="pb-20 flex justify-between">
+                <div className="pb-20 flex max-md:flex-col gap-y-5 justify-between">
                     <h3 className="italic !text-pink">Ocean Apt.</h3>
                     <p className="font-madefor-display max-w-2xs !text-pink">
                         I{"'"}m a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
@@ -30,19 +30,19 @@ export default function Ocean() {
                     <div className="flex flex-col gap-y-2">
                         <div className="flex gap-x-3">
                             <Image src={"/svg/floor/white.svg"} width={20} height={20} alt={"White Floor Icon"}/>
-                            <span className="!text-pink">Floors: 3-15</span>
+                            <span className="!text-pink font-madefor-display">Floors: 3-15</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/space/white.svg"} width={20} height={20} alt={"White Space Icon"}/>
-                            <span className="!text-pink">Space: 120 Sqm</span>
+                            <span className="!text-pink font-madefor-display">Space: 120 Sqm</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/bedroom/white.svg"} width={20} height={20} alt={"White Bedroom Icon"}/>
-                            <span className="!text-pink">Bedrooms: 3</span>
+                            <span className="!text-pink font-madefor-display">Bedrooms: 3</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/bathroom/white.svg"} width={20} height={20} alt={"White Bathroom Icon"}/>
-                            <span className="!text-pink">Bathrooms: 1-2</span>
+                            <span className="!text-pink font-madefor-display">Bathrooms: 1-2</span>
                         </div>
                     </div>
                     <div className="flex flex-col gap-y-3">

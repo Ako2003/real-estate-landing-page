@@ -15,9 +15,9 @@ export default function Building() {
                 </div>
 
                 {/* Images */}
-                <div className="mt-20 mb-10">
-                    <div className="flex mx-auto gap-x-20">
-                        <div className="w-full">
+                <div className="pt-20 mb-10">
+                    <div className="flex max-md:flex-col mx-auto gap-x-20">
+                        <div className="w-full max-md:mb-10">
                             <Image
                                 src={"/images/c837a6_7c1f9ec45bb847d59f6805065ad64852~mv2.jpg"}
                                 alt={"Kitchen with sink"} width={440} height={720}
@@ -31,27 +31,27 @@ export default function Building() {
                     </div>
                 </div>
 
-                <div className="pb-20 flex justify-between">
-                    <h3 className="italic ">Gardenia Apt.</h3>
+                <div className="pb-20 flex max-md:flex-col gap-y-5 justify-between">
+                    <h3 className="italic">Gardenia Apt.</h3>
                     <p className="font-madefor-display max-w-2xs">
                         I{"'"}m a paragraph. Click here to add your own text and edit me. I’m a great place for you to tell a story and let your users know a little more about you.
                     </p>
                     <div className="flex flex-col gap-y-2">
                         <div className="flex gap-x-3">
                             <Image src={"/svg/floor/brown.svg"} width={20} height={20} alt={"Brown Floor Icon"}/>
-                            <span>Floors: 1-2</span>
+                            <span className="font-madefor-display">Floors: 1-2</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/space/brown.svg"} width={20} height={20} alt={"Brown Space Icon"}/>
-                            <span>Space: 150 Sqm</span>
+                            <span className="font-madefor-display">Space: 150 Sqm</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/bedroom/brown.svg"} width={20} height={20} alt={"Brown Bedroom Icon"}/>
-                            <span>Bedrooms: 2</span>
+                            <span className="font-madefor-display">Bedrooms: 2</span>
                         </div>
                         <div className="flex gap-x-3">
                             <Image src={"/svg/bathroom/brown.svg"} width={20} height={20} alt={"Brown Bathroom Icon"}/>
-                            <span>Bathrooms: 1-2</span>
+                            <span className="font-madefor-display">Bathrooms: 1-2</span>
                         </div>
                     </div>
                     <div className="flex flex-col gap-y-3">
