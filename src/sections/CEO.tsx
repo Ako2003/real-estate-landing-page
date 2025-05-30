@@ -3,11 +3,11 @@ import Image from "next/image";
 export default function CEO() {
     return (
         <section className="bg-yellow">
-            <div className="max-w-7xl mx-auto py-20 flex justify-between items-center">
+            <div className="max-w-7xl mx-auto w-11/12 py-20 flex max-md:flex-col gap-x-10 justify-between items-center">
                 <div>
                     <Image src={"/images/yuvalna_portrait_photography_mid_shot_of_a_woman_that_is_50_yea_9586c9a1-5465-4fe3-b3b9-0c.jpg"} width={461} height={550} alt="Raya Hayek" />
                 </div>
-                <div className="max-w-md">
+                <div className="max-w-md max-md:mt-10">
                     <h6 className="mb-1">The Architect</h6>
                     <h3 className="mb-1">Raya Hayek</h3>
                     <h6 className="mb-5">Award winning architect and designer proudly presents her first residential project in town</h6>

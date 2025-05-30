@@ -3,8 +3,8 @@ import Image from "next/image";
 export default function Developer() {
     return (
         <section className="bg-yellow">
-            <div className="max-w-7xl mx-auto py-20 flex justify-between items-center">
-                <div className="max-w-md">
+            <div className="max-w-7xl mx-auto w-11/12 py-20 flex max-md:flex-col gap-x-10 justify-between items-center">
+                <div className="max-w-md max-md:mb-10">
                     <h6 className="mb-1">The Developer</h6>
                     <h3 className="mb-1">Mogendor Group</h3>
                     <h6 className="mb-5">With over 155 successful projects since 1989, Mogendor launches yet another
