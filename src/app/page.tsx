@@ -19,7 +19,6 @@ import {
 export default function Page(){
     return (
         <div className="w-full main-background h-[880px]">
-            <Nav />
             <Hero />
             <Body />
             <Building />

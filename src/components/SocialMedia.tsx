@@ -7,7 +7,7 @@ type SocialMediaProps = {
 
 export default function SocialMedia({ socialMedia = [] }: SocialMediaProps) {
     return(
-        <div className="flex items-center gap-x-5">
+        <div className="flex items-center gap-x-5 max-md:hidden">
             {socialMedia.includes("instagram") &&
                 <Link href="https://instagram.com">
                     <Image src="/svg/instagram.svg" alt="Instagram Icon" width={30} height={30} />

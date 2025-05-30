@@ -1,3 +1,5 @@
+import {Footer} from "@/sections";
+
 export default function Page() {
     return(
         <main>
@@ -107,6 +109,8 @@ export default function Page() {
                     </ul>
                 </div>
             </section>
+
+            <Footer />
         </main>
     )
 }

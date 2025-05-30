@@ -1,3 +1,5 @@
+import {Footer} from "@/sections";
+
 export default function Page() {
     return(
         <main>
@@ -32,6 +34,7 @@ export default function Page() {
                 <h6 className="mb-5">What to include in the Privacy Policy</h6>
                 <p className="font-madefor-display mb-5">Generally speaking, a Privacy Policy often addresses these types of issues: the types of information the website is collecting and the manner in which it collects the data; an explanation about why is the website collecting these types of information; what are the website’s practices on sharing the information with third parties; ways in which your visitors and customers can exercise their rights according to the relevant privacy legislation; the specific practices regarding minors’ data collection; and much, much more.</p>
             </section>
+            <Footer />
         </main>
     )
 }
