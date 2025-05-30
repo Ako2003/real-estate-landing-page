@@ -1,7 +1,15 @@
+"use client"
 import Image from "next/image";
 import Button from "@/components/Button";
+import {motion, useInView} from "framer-motion";
+import {useRef} from "react";
 
 export default function Building() {
+    const ref1 = useRef(null);
+    const isInView1 = useInView(ref1, { once: true });
+
+    const ref2 = useRef(null);
+    const isInView2 = useInView(ref2, { once: true });
     return(
         <section className="bg-yellow" id="building">
             <div className="container">
@@ -17,17 +25,35 @@ export default function Building() {
                 {/* Images */}
                 <div className="pt-20 mb-10">
                     <div className="flex max-lg:flex-col mx-auto gap-x-20">
-                        <div className="w-full max-lg:mb-10">
+                        <motion.div
+                            ref={ref1}
+                            initial={{ y: -100, opacity: 0 }}
+                            animate={isInView1 ? { y: 0, opacity: 1 } : {}}
+                            transition={{
+                                duration: 1,
+                                ease: "easeInOut",
+                                delay: 0.2,
+                            }}
+                            className="w-full max-lg:mb-10">
                             <Image
                                 src={"/images/c837a6_7c1f9ec45bb847d59f6805065ad64852~mv2.jpg"}
                                 alt={"Kitchen with sink"} width={440} height={720}
                                 className="w-full h-[720px] object-cover object-center"/>
-                        </div>
-                        <div className="w-full">
+                        </motion.div>
+                        <motion.div
+                            ref={ref2}
+                            initial={{ y: 100, opacity: 0 }}
+                            animate={isInView2 ? { y: 0, opacity: 1 } : {}}
+                            transition={{
+                                duration: 1,
+                                ease: "easeInOut",
+                                delay: 0.2,
+                            }}
+                            className="w-full">
                             <Image src={"/images/c837a6_8466b841f89349109f8ed9e27d4999a2~mv2.jpg"}
                                    alt={"Bathroom with bath"} width={440}
                                    height={720} className="w-full h-[720px] object-cover object-center"/>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 

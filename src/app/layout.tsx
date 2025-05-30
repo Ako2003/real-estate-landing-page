@@ -2,7 +2,6 @@ import type { Metadata } from "next";
 import { Poppins, Libre_Baskerville, Wix_Madefor_Display } from "next/font/google";
 import "./globals.css";
 import Nav from "@/components/Nav";
-import { Footer } from "@/sections";
 
 const libreBaskerville = Libre_Baskerville({
     variable: "--font-libre-baskerville",

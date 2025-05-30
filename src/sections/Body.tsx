@@ -1,6 +1,15 @@
+"use client"
 import Image from "next/image";
+import { motion, useInView } from "framer-motion";
+import { useRef } from "react";
 
 export default function Body(){
+    const ref1 = useRef(null);
+    const isInView1 = useInView(ref1, { once: true });
+
+    const ref2 = useRef(null);
+    const isInView2 = useInView(ref2, { once: true });
+
     return(
         <section className="container" id="about">
             <div className="pt-20 max-w-4xl mx-auto">
@@ -16,15 +25,33 @@ export default function Body(){
             {/* Images */}
             <div className="mt-20 max-w-5xl mx-auto pb-30">
                 <div className="flex max-lg:flex-col lg:items-center justify-between">
-                    <div className="flex justify-start max-lg:mb-10">
+                    <motion.div
+                        ref={ref1}
+                        initial={{ x: -100, opacity: 0 }}
+                        animate={isInView1 ? { x: 0, opacity: 1 } : {}}
+                        transition={{
+                            duration: 1,
+                            ease: "easeInOut",
+                            delay: 0.2,
+                        }}
+                        className="flex justify-start max-lg:mb-10">
                         <Image
                             src={"/images/yuvalna_photograph_of_a_Boardwalk_that_is_close_to_the_building_3273c742-f097-4ed5-a17e-82.jpg"}
                             alt={"Boardwalk near the building"} width={290} height={390} className="max-lg:w-[200px]"/>
-                    </div>
-                    <div className="flex justify-end">
+                    </motion.div>
+                    <motion.div
+                        ref={ref2}
+                        initial={{ x: 100, opacity: 0 }}
+                        animate={isInView2 ? { x: 0, opacity: 1 } : {}}
+                        transition={{
+                            duration: 1,
+                            ease: "easeInOut",
+                            delay: 0.2,
+                        }}
+                        className="flex justify-end">
                         <Image src={"/images/pexels-fernando-reyes-6600902 copy.jpg"} alt={"Beach"} width={209}
                                height={251}/>
-                    </div>
+                    </motion.div>
                 </div>
             </div>
         </section>

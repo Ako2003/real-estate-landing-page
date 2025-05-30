@@ -5,6 +5,7 @@ import Link from "next/link";
 import Button from "@/components/Button";
 import SocialMedia from "@/components/SocialMedia";
 import {Menu, X} from "lucide-react";
+import {motion, AnimatePresence} from "framer-motion";
 
 const menu = [
     { title: "About", slug: "about" },
@@ -50,7 +51,7 @@ export default function Nav() {
                     <ul className="flex gap-5 font-light max-lg:hidden">
                         {menu.map((item) => (
                             <li key={item.title}>
-                                <Link className="font-madefor-display" href={`#${item.slug}`} passHref>
+                                <Link className="font-madefor-display" href={`/#${item.slug}`} passHref>
                                     {item.title}
                                 </Link>
                             </li>
@@ -58,7 +59,9 @@ export default function Nav() {
                     </ul>
 
                     {/* Logo */}
-                    <h5 className="font-libre-baskerville font-bold">LP/52</h5>
+                    <Link href="/">
+                        <h5 className="font-libre-baskerville font-bold">LP/52</h5>
+                    </Link>
 
                     {/* Button and Social Media */}
                     <div className="flex items-center gap-x-5">
@@ -66,11 +69,13 @@ export default function Nav() {
                             Inquire
                         </Button>
                         <SocialMedia socialMedia={["instagram", "youtube", "facebook"]} />
-                        <div className="lg:hidden" onClick={() => setToggle(!toggle)}>
-                            {
-                                toggle ? <X /> : <Menu />
-                            }
-                        </div>
+                        <AnimatePresence mode="wait" initial={false}>
+                            <div className="lg:hidden" onClick={() => setToggle(!toggle)}>
+                                {
+                                    toggle ? <X /> : <Menu />
+                                }
+                            </div>
+                        </AnimatePresence>
                     </div>
 
                     {
@@ -85,17 +90,25 @@ export default function Nav() {
 
 export function Mobile({ setToggle }: any) {
     return (
-        <section className="absolute bg-pink h-[calc(100dvh-70px)] w-full left-0 top-[70px]">
-            <ul className="flex flex-col justify-center items-center h-full gap-5 font-light">
-                {menu.map((item) => (
-                    <li key={item.title} onClick={() => setToggle(false)}>
-                        <Link className="font-madefor-display" href={`#${item.slug}`} passHref>
-                            {item.title}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
-        </section>
+        <AnimatePresence>
+            <motion.section
+                initial={{ y: "-100%", opacity: 0 }}
+                animate={{ y: 0, opacity: 1 }}
+                exit={{ y: "-100%", opacity: 0 }}
+                transition={{ duration: 0.4, ease: "easeInOut" }}
+                className="absolute bg-pink h-[calc(100dvh-70px)] w-full left-0 top-[70px] z-30"
+            >
+                <ul className="flex flex-col justify-center items-center h-full gap-5 font-light">
+                    {menu.map((item) => (
+                        <li key={item.title} onClick={() => setToggle(false)}>
+                            <Link className="font-madefor-display" href={`#${item.slug}`} passHref>
+                                {item.title}
+                            </Link>
+                        </li>
+                    ))}
+                </ul>
+            </motion.section>
+        </AnimatePresence>
 
     )
 }

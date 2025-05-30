@@ -1,24 +1,47 @@
+"use client"
 import Image from "next/image";
 import Button from "@/components/Button";
+import {motion, useInView} from "framer-motion";
+import {useRef} from "react";
 
 export default function Sky() {
+    const ref1 = useRef(null);
+    const isInView1 = useInView(ref1, { once: true });
+
+    const ref2 = useRef(null);
+    const isInView2 = useInView(ref2, { once: true });
     return(
         <section className="bg-brown">
             <div className="container">
                 {/* Images */}
                 <div className="pt-20 mb-10">
                     <div className="flex max-lg:flex-col mx-auto gap-x-20">
-                        <div className="w-full max-lg:mb-10">
+                        <motion.div
+                            ref={ref1}
+                            initial={{ y: -100, opacity: 0 }}
+                            animate={isInView1 ? { y: 0, opacity: 1 } : {}}
+                            transition={{
+                                duration: 1,
+                                ease: "easeInOut",
+                                delay: 0.2,
+                            }} className="w-full max-lg:mb-10">
                             <Image
                                 src={"/images/c837a6_b71e08bb5f4842229b68056de18675d0~mv2.jpg"}
                                 alt={"Room with sofa"} width={440} height={720}
                                 className="w-full h-[720px] object-cover object-center"/>
-                        </div>
-                        <div className="w-full">
+                        </motion.div>
+                        <motion.div ref={ref2}
+                                    initial={{ y: 100, opacity: 0 }}
+                                    animate={isInView2 ? { y: 0, opacity: 1 } : {}}
+                                    transition={{
+                                        duration: 1,
+                                        ease: "easeInOut",
+                                        delay: 0.2,
+                                    }} className="w-full">
                             <Image src={"/images/c837a6_c358e5c675c4402ba31877a5537a47aa~mv2.jpg"}
                                    alt={"Office view"} width={440}
                                    height={720} className="w-full h-[720px] object-cover object-center"/>
-                        </div>
+                        </motion.div>
                     </div>
                 </div>
 
