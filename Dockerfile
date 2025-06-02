@@ -1,5 +1,5 @@
 # Use a base node image
-FROM node:18-alpine AS base
+FROM node:22-alpine AS base
 
 ## Enable corepack for npm management
 RUN corepack enable
