@@ -12,5 +12,5 @@ services:
 
 networks:
   default:
-    name: nginx-proxy-manager
+    name: npm
     external: true
