@@ -34,9 +34,6 @@ ENV NEXT_TELEMETRY_DISABLED 1
 # Build the application
 RUN npm run build
 
-# Run IndexNow (for sending a ping to search engines if some links of the website was changed)
-RUN node lib/indexnow.js
-
 # Production image, setup environment
 FROM base AS runner
 WORKDIR /app
